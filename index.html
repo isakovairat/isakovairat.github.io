@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>pidor</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="typing visible">
+			<p>ты пидор :)</p>
+		</div>
+	</div>
+
+	<style>
+		p {
+			font-size: 48px;
+		}
+
+		.containter {
+			width: auto;
+			height: 100px;
+
+		}
+
+		.typing {
+			margin: auto;
+			width: 0;
+			white-space: nowrap;
+			overflow: hidden;
+			border-right: 1px solid;
+		}
+
+		.typing.visible {
+			animation: typing 4s steps(11) forwards, caret 1s steps(1) infinite;
+		}
+
+		@keyframes typing {
+			to {
+				width: 250px;
+			}
+		}
+
+		@keyframes caret {
+			50% {
+				border-color: transparent;
+			}
+		}
+	</style>
+</body>
+
+</html>
