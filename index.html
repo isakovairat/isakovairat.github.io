@@ -4,51 +4,59 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>pidor</title>
+	<title>Document</title>
+	<link type="text/css" rel="stylesheet" href="./normalize.css">
+	<link type="text/css" rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-	<div class="container">
-		<div class="typing visible">
-			<p>ты пидор :)</p>
+	<section>
+		<div class="logo-block">
+			<img src="./img/logo.svg" alt="logo" class="logo">
 		</div>
-	</div>
 
-	<style>
-		p {
-			font-size: 48px;
-		}
-
-		.containter {
-			width: auto;
-			height: 100px;
-
-		}
-
-		.typing {
-			margin: auto;
-			width: 0;
-			white-space: nowrap;
-			overflow: hidden;
-			border-right: 1px solid;
-		}
-
-		.typing.visible {
-			animation: typing 4s steps(11) forwards, caret 1s steps(1) infinite;
-		}
-
-		@keyframes typing {
-			to {
-				width: 250px;
-			}
-		}
-
-		@keyframes caret {
-			50% {
-				border-color: transparent;
-			}
-		}
-	</style>
+		<div class="info-block">
+			<div class="info-block-wrapper">
+				<div class="heading-container">
+					<div class="heading-title">Get iinto it today</div>
+					<div class="heading-text">There is no charge or obligation upon registration.</div>
+				</div>
+				<div class="register-container">
+					<a href="#" class="social fb"><img src="./img/facebook.svg">Register with Facebook</a>
+					<a href="#" class="social ld"><img src="./img/linkedin.svg">Register with LinkedIn</a>
+				</div>
+				<div class="breakline-container">
+					<span>or</span>
+				</div>
+				<form action="">
+					<div class="mail-phone-container">
+						<input type="email" class="input-form" placeholder="Email" required>
+						<input type="phone" class="input-form" placeholder="Phone" required>
+					</div>
+					<div class="question-container">
+						<div class="question-title">What type of investor are you?</div>
+						<div class="question-text">Select the type of investor you are below.</div>
+					</div>
+					<div class="radio-input">
+						<input type="radio">
+						<label>Individual</label>
+						<input type="radio">
+						<label>Business</label>
+						<input type="radio">
+						<label>IRA</label>
+						<input type="radio">
+						<label>Trust</label>
+					</div>
+					<div class="terms-container">
+						<input type="checkbox">
+						<label for="terms">I agree to terms and receiving notifications from iinto <a href="#">View full
+								terms</a></label>
+					</div>
+					<button type="submit" class="submit-btn">Create Account</button>
+				</form>
+			</div>
+		</div>
+	</section>
 </body>
 
 </html>
