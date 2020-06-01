@@ -42,6 +42,7 @@ nav {
     justify-content: center;
     align-items: center;
     transition: .5s;
+    cursor: pointer;
 }
 
 .nav__item:hover, .nav__item:focus{
@@ -118,7 +119,7 @@ nav {
     border-radius: 5px;
 }
 
-.main__text {
+.text {
     font-size: 1.4rem;
     margin-bottom: 20px;
     margin-left: 16px;
@@ -128,7 +129,7 @@ nav {
     width: 320px;
 }
 
-.main__text-btn {
+.text-btn {
     margin-left: 26px;
     font-size: 1.6rem;
     font-weight: 500;
@@ -137,7 +138,7 @@ nav {
     margin-bottom: 16px;
 }
 
-.main__text-btn::before {
+.text-btn::before {
     content: url("./img/next.svg");
     position: relative;
     top: 0;
@@ -157,9 +158,9 @@ nav {
 
 .menu__item {
     height: 40px;
+    width: auto;
     white-space: nowrap;
     padding: 0 12px;
-    margin-right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -169,6 +170,9 @@ nav {
     letter-spacing: -0.2px;
     transition: .5s;
     color: #7E7E82;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 6px;
 }
 
 .menu__item_active {
@@ -223,15 +227,15 @@ nav {
         margin-left: 12px;
     }
 
-    .nav__right-col .nav__item:not(:last-child):not(:nth-child(4)) {
+    .nav__right-col .hidden {
         display: none;
     }
 
-    .main__text {
+    .text {
         width: 88%;
     }
 
-    .main__text_text-additional {
+    .text_text-additional {
         display: none;
     }
 
@@ -338,8 +342,9 @@ nav {
         margin-left: 24px;
     }
     .main__image {
+        margin-left: 20px;
         border-radius: 7px;
-        width: 520px;
+        width: 30vw;
     }
 
     .article__image {
