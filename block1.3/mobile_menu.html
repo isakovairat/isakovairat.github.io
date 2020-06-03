@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mobile menu</title>
+	<link rel="stylesheet" href="./TTLakes/stylesheet.css">
+	<link rel="stylesheet" href="./styles.css">
+	<link rel="stylesheet" href="./mobile_menu.css">
+</head>
+
+<body>
+	<div class="mobile-menu">
+		<header>
+			<div class="nav__left-col">
+				<div class="nav__item">
+					<a class="nav__link" href="#"><i class="nav__icon nav__icon_i-close"></i></a>
+				</div>
+				<div class="nav__logo">
+					<img class="nav__image" src="./img/logo.svg" alt="logo">
+				</div>
+			</div>
+			<div class="nav__right-col">
+				<div class="nav__item">
+					<a class="nav__link" href="#"><i class="nav__icon nav__icon_i-search_mobile"></i></a>
+				</div>
+			</div>
+		</header>
+
+		<nav class="nav_mobile">
+			<div class="menu_mobile">
+				<ul class="menu__list_mobile">
+					<li class="menu__item_mobile menu__item_active_mobile">Ремонт техники</li>
+					<li class="menu__item_mobile">Услуги и сервисы</li>
+					<li class="menu__item_mobile">Корпоративным клиентам</li>
+					<li class="menu__item_mobile">Продавцам техники</li>
+					<li class="menu__item_mobile">Партнерам</li>
+					<li class="menu__item_mobile">Производителям</li>
+					<li class="menu__item_mobile">Наши сервисные центры</li>
+					<li class="menu__item_mobile">Контакты</li>
+				</ul>
+			</div>
+		</nav>
+
+		<footer class="footer_mobile">
+			<div class="footer__nav">
+				<div class="nav__item">
+					<a class="nav__link" href="#"><i class="nav__icon nav__icon_i-phone"></i></a>
+				</div>
+				<div class="nav__item">
+					<a class="nav__link" href="#"><i class="nav__icon nav__icon_i-message"></i></a>
+				</div>
+				<div class="nav__item">
+					<a class="nav__link" href="#"><i class="nav__icon nav__icon_i-profile"></i></a>
+				</div>
+			</div>
+			<div class="footer__contacts">
+				<a class="footer__email" href="mailto:mail@cps.com">mail@cps.com</a>
+				<a class="footer__number" href="tel:+78008908900">8 800 890 8900</a>
+			</div>
+			<div class="footer__languages">
+				<p class="lang-item lang-item_active" title="русский">RU</p>
+				<p class="lang-item" title="english">EN</p>
+				<p class="lang-item" title="chinese">CH</p>
+			</div>
+		</footer>
+	</div>
+</body>
+
+<script>
+	const menuItems = document.querySelectorAll('.menu__item_mobile');
+	menuItems.forEach(item => item.addEventListener('click', menuItemOnClick));
+
+	function menuItemOnClick() {
+		menuItems.forEach(size => size.classList.remove('menu__item_active_mobile'));
+		this.classList.add('menu__item_active_mobile');
+	}
+</script>
+
+</html>
