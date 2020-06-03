@@ -26,7 +26,7 @@ header {
 	align-self: flex-start;
 }
 .nav__right-col {
-	margin-top: 8px;
+	margin-top: 6px;
 	align-self: flex-start;
 }
 
@@ -179,10 +179,6 @@ header {
 }
 
 @media screen and (min-width: 1120px) {
-	header {
-		display: block;
-	}
-
 	.nav__logo {
 		width: 98px;
 		height: 52px;
