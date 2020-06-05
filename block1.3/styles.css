@@ -256,7 +256,7 @@ html{
 
 
 @media screen and (width: 768px){
-    .nav__item:nth-child(4) {
+    .separator {
         margin-left: 25px;
     }
 
@@ -286,11 +286,11 @@ html{
         border-radius: 1px;
     }
 
-    .nav__item:nth-child(4) {
+    .separator {
         margin-left: 25px;
     }
 
-    .nav__item:nth-child(4)::before{
+    .separator::before{
         content: "";
         position: absolute;
         right: 135px;

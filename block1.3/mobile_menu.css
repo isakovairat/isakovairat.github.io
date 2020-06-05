@@ -3,14 +3,14 @@ html {
 	height: 100%;
 }
 
+nav {
+	border: none;
+}
+
 .mobile-menu {
 	width: 320px;
 	display: flex;
 	flex-direction: column;
-}
-
-nav {
-	border: none;
 }
 
 .header {
