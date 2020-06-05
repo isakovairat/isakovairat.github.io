@@ -41,7 +41,7 @@ nav {
 	margin: 0 8px;
 	background-color: #FF3E79;
 	border-radius: 50%;
-	display: flesx;
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	transition: .5s;
@@ -207,9 +207,9 @@ nav {
 
 @media screen and (min-width: 321px) {
 	.mobile-menu {
-		-webkit-box-shadow: 25px 0px 10px 0px rgba(0,0,0,0.1);
-		-moz-box-shadow: 25px 0px 10px 0px rgba(0,0,0,0.1);
-		box-shadow: 25px 0px 10px 0px rgba(0,0,0,0.1);
+		-webkit-box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
+		-moz-box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
+		box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
 	}
 }
 
