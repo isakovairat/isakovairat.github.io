@@ -141,6 +141,10 @@ html {
 }
 
 @media screen and (min-width: 1120px) {
+    .services__brands {
+        height: 175px;
+    }
+
     .services__wrapper {
         height: auto;
         display: -webkit-box;
