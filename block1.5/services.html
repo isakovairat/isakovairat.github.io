@@ -126,6 +126,32 @@
 	<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 	<!-- Initialize Swiper -->
 	<script>
+		let showAll = document.querySelector(".services__additional-btn");
+		showAll.addEventListener('click', showHidden);
+		window.addEventListener('resize', addSwiper);
+
+		function addSwiper() {
+			let swiper;
+
+			if (window.matchMedia("screen and (min-width: 320px) and (max-width: 767px)").matches) {
+					swiper = new Swiper('.swiper-container', {
+					slidesPerView: 'auto',
+					// autoplay: {
+					// 	delay: 2500,
+					// 	disableOnInteraction: false,
+					// },
+					pagination: {
+						el: '.swiper-pagination',
+						clickable: true,
+					},
+				});
+				document.querySelector('.swiper-pagination').style.display = 'block';
+			} else {
+				delete swiper;
+				document.querySelector('.swiper-pagination').style.display = 'none';
+			}
+		}
+
 		function showHidden() {
 			if (this.textContent === 'Показать все') {
 				this.textContent = 'Скрыть';
@@ -137,22 +163,6 @@
 				document.querySelector('.services__brands').style.height = '175px';
 				document.querySelector('.services__additional-img').style.transform = 'rotate(0deg)';
 			}
-		}
-		let showAll = document.querySelector(".services__additional-btn");
-		showAll.addEventListener('click', showHidden);
-		if (window.matchMedia("screen and (min-width: 320px) and (max-width: 767px)").matches) {
-			let swiper = new Swiper('.swiper-container', {
-				slidesPerView: 'auto',
-				// autoplay: {
-				// 	delay: 2500,
-				// 	disableOnInteraction: false,
-				// },
-				spaceBetween: 30,
-				pagination: {
-					el: '.swiper-pagination',
-					clickable: true,
-				},
-			});
 		}
 	</script>
 </body>

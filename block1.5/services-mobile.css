@@ -2,6 +2,8 @@
     .services__header_mobile {
         width: 100%;
         height: auto;
+        background: -webkit-gradient(linear, right top, left top, from(#F8F8F8), color-stop(98.61%, #FFFFFF));
+        background: -o-linear-gradient(right, #F8F8F8 0%, #FFFFFF 98.61%);
         background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
         margin-bottom: 0;
     }
@@ -17,14 +19,16 @@
 
     .services__brand {
         margin-top: 16px;
+        margin-right: 16px;
     }
 
     .swiper-wrapper {
+        height: 90px;
         margin-bottom: 16px;
         margin-left: 16px;
     }
+
     .services__additional {
         display: none;
     }
-
 }
