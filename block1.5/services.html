@@ -126,6 +126,7 @@
 			if (breakpoint.matches === false) {
 				if (swiper) {
 					swiper.destroy(true, true);
+					document.querySelector('.swiper-pagination').style.display = 'none';
 				}
 				return ;
 			}
@@ -140,8 +141,9 @@
 				pagination: {
 					el: '.swiper-pagination',
 					clickable: true,
-				},
+				}
 			});
+			document.querySelector('.swiper-pagination').style.display = 'block';
 		}
 
 		window.addEventListener('resize', breakpointChecker);
