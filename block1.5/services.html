@@ -21,92 +21,70 @@
 			</div>
 			<div class="services__brands swiper-container">
 				<div class="services__wrapper swiper-wrapper">
-					<div class="services__brand swiper-slide">
-						<img class="services__logo" src="./img/lenovo.svg" alt="lenovo">
-						<a href="#" class="services__link">
-							<button class="services__btn">
-								<img src="./img/arrow.svg" alt="">
-							</button>
+					<div class="card swiper-slide">
+						<img class="card__logo" src="./img/lenovo.svg" alt="lenovo">
+						<a href="#" class="card__link">
+							<button class="card__btn"></button>
 						</a>
 					</div>
-					<div class="services__brand swiper-slide">
-						<img class="services__logo" src="./img/samsung.svg" alt="samsung">
-						<a href="#" class="services__link">
-							<button class="services__btn">
-								<img src="./img/arrow.svg" alt="">
-							</button>
+					<div class="card swiper-slide">
+						<img class="card__logo" src="./img/samsung.svg" alt="samsung">
+						<a href="#" class="card__link">
+							<button class="card__btn"></button>
 						</a>
 					</div>
-					<div class="services__brand swiper-slide">
-						<img class="services__logo" src="./img/apple.svg" alt="apple">
-						<a href="#" class="services__link">
-							<button class="services__btn">
-								<img src="./img/arrow.svg" alt="">
-							</button>
+					<div class="card swiper-slide">
+						<img class="card__logo" src="./img/apple.svg" alt="apple">
+						<a href="#" class="card__link">
+							<button class="card__btn"></button>
 						</a>
 					</div>
-					<div class="services__brand swiper-slide">
-						<img class="services__logo" src="./img/bosch.svg" alt="bosch">
-						<a href="#" class="services__link">
-							<button class="services__btn">
-								<img src="./img/arrow.svg" alt="">
-							</button>
+					<div class="card swiper-slide">
+						<img class="card__logo" src="./img/bosch.svg" alt="bosch">
+						<a href="#" class="card__link">
+							<button class="card__btn"></button>
 						</a>
 					</div>
-					<div class="services__brand swiper-slide">
-						<img class="services__logo" src="./img/hp.svg" alt="hp">
-						<a href="#" class="services__link">
-							<button class="services__btn">
-								<img src="./img/arrow.svg" alt="">
-							</button>
+					<div class="card swiper-slide">
+						<img class="card__logo" src="./img/hp.svg" alt="hp">
+						<a href="#" class="card__link">
+							<button class="card__btn"></button>
 						</a>
 					</div>
-					<div class="services__brand swiper-slide">
-						<img class="services__logo" src="./img/acer.svg" alt="acer">
-						<a href="#" class="services__link">
-							<button class="services__btn">
-								<img src="./img/arrow.svg" alt="">
-							</button>
+					<div class="card swiper-slide">
+						<img class="card__logo" src="./img/acer.svg" alt="acer">
+						<a href="#" class="card__link">
+							<button class="card__btn"></button>
 						</a>
 					</div>
-					<div class="services__brand swiper-slide">
-						<img class="services__logo" src="./img/viewsonic.svg" alt="viewsonic">
-						<a href="#" class="services__link">
-							<button class="services__btn">
-								<img src="./img/arrow.svg" alt="">
-							</button>
+					<div class="card swiper-slide">
+						<img class="card__logo" src="./img/viewsonic.svg" alt="viewsonic">
+						<a href="#" class="card__link">
+							<button class="card__btn"></button>
 						</a>
 					</div>
-					<div class="services__brand swiper-slide">
-						<img class="services__logo" src="./img/sony.svg" alt="sony">
-						<a href="#" class="services__link">
-							<button class="services__btn">
-								<img src="./img/arrow.svg" alt="">
-							</button>
+					<div class="card swiper-slide">
+						<img class="card__logo" src="./img/sony.svg" alt="sony">
+						<a href="#" class="card__link">
+							<button class="card__btn"></button>
 						</a>
 					</div>
-					<div class="services__brand swiper-slide">
-						<img class="services__logo" src="./img/lenovo.svg" alt="lenovo">
-						<a href="#" class="services__link">
-							<button class="services__btn">
-								<img src="./img/arrow.svg" alt="">
-							</button>
+					<div class="card swiper-slide">
+						<img class="card__logo" src="./img/lenovo.svg" alt="lenovo">
+						<a href="#" class="card__link">
+							<button class="card__btn"></button>
 						</a>
 					</div>
-					<div class="services__brand swiper-slide">
-						<img class="services__logo" src="./img/samsung.svg" alt="samsung">
-						<a href="#" class="services__link">
-							<button class="services__btn">
-								<img src="./img/arrow.svg" alt="">
-							</button>
+					<div class="card swiper-slide">
+						<img class="card__logo" src="./img/samsung.svg" alt="samsung">
+						<a href="#" class="card__link">
+							<button class="card__btn"></button>
 						</a>
 					</div>
-					<div class="services__brand swiper-slide">
-						<img class="services__logo" src="./img/apple.svg" alt="apple">
-						<a href="#" class="services__link">
-							<button class="services__btn">
-								<img src="./img/arrow.svg" alt="">
-							</button>
+					<div class="card swiper-slide">
+						<img class="card__logo" src="./img/apple.svg" alt="apple">
+						<a href="#" class="card__link">
+							<button class="card__btn"></button>
 						</a>
 					</div>
 				</div>
@@ -124,33 +102,12 @@
 
 	<!-- Swiper JS -->
 	<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-	<!-- Initialize Swiper -->
 	<script>
 		let showAll = document.querySelector(".services__additional-btn");
+		const breakpoint = window.matchMedia('(min-width: 320px) and (max-width: 767px)');
+		let swiper;
+
 		showAll.addEventListener('click', showHidden);
-		window.addEventListener('resize', addSwiper);
-
-		function addSwiper() {
-			let swiper;
-
-			if (window.matchMedia("screen and (min-width: 320px) and (max-width: 767px)").matches) {
-					swiper = new Swiper('.swiper-container', {
-					slidesPerView: 'auto',
-					// autoplay: {
-					// 	delay: 2500,
-					// 	disableOnInteraction: false,
-					// },
-					pagination: {
-						el: '.swiper-pagination',
-						clickable: true,
-					},
-				});
-				document.querySelector('.swiper-pagination').style.display = 'block';
-			} else {
-				delete swiper;
-				document.querySelector('.swiper-pagination').style.display = 'none';
-			}
-		}
 
 		function showHidden() {
 			if (this.textContent === 'Показать все') {
@@ -164,6 +121,31 @@
 				document.querySelector('.services__additional-img').style.transform = 'rotate(0deg)';
 			}
 		}
+
+		const breakpointChecker = function () {
+			if (breakpoint.matches === false) {
+				if (swiper) {
+					swiper.destroy(true, true);
+				}
+				return ;
+			}
+			else if (breakpoint.matches === true) {
+				return enableSwiper();
+			}
+		}
+
+		const enableSwiper = function () {
+			swiper = new Swiper ('.swiper-container', {
+				slidesPerView: 'auto',
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+			});
+		}
+
+		window.addEventListener('resize', breakpointChecker);
+		breakpointChecker();
 	</script>
 </body>
 

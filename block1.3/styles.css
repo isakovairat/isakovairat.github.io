@@ -372,7 +372,7 @@ html{
         justify-content: space-between;
     }
 
-    .services__link {
+    .card__link {
         font-size: 16px;
         line-height: 2.4rem;
         letter-spacing: -0.2px;
@@ -388,7 +388,7 @@ html{
         margin-right: 15px;
     }
 
-    .services__link:link {
+    .card__link:link {
         color: #1B1C21;
     }
 
