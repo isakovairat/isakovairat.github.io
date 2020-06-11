@@ -128,7 +128,7 @@
 					swiper.destroy(true, true);
 					document.querySelector('.swiper-pagination').style.display = 'none';
 				}
-				return ;
+				return;
 			}
 			else if (breakpoint.matches === true) {
 				return enableSwiper();
@@ -136,12 +136,15 @@
 		}
 
 		const enableSwiper = function () {
-			swiper = new Swiper ('.swiper-container', {
+			swiper = new Swiper('.swiper-container', {
 				slidesPerView: 'auto',
 				pagination: {
 					el: '.swiper-pagination',
 					clickable: true,
-				}
+				},
+				a11y: {
+					enabled: false,
+				},
 			});
 			document.querySelector('.swiper-pagination').style.display = 'block';
 		}
