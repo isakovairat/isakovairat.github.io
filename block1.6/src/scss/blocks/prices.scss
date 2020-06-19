@@ -1,0 +1,17 @@
+.prices {
+  display: flex;
+
+  &__wrapper {
+    width: auto;
+    margin-bottom: 16px;
+    margin-left: 8px;
+  }
+
+  @media screen and (min-width: $screen-mobile) and (max-width: $screen-tablet - 1) {
+    height: 248px;
+  }
+
+  @media screen and (min-width: $screen-tablet) {
+    display: none;
+  }
+}

@@ -1,17 +1,48 @@
-$bgColor: #24292e;
-$text: #fff;
+@import "../fonts/stylesheet.css";
+@import "./variables";
 
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
+/* Миксины */
+@import "./mixins/separator";
 
-body {
-  padding: 1rem;
+/* БЭМ-блоки */
+@import "./blocks/page-header";
+@import "./blocks/nav";
+@import "./blocks/icon";
+@import "./blocks/logo";
+@import "./blocks/about";
+@import "./blocks/menu";
+@import "./blocks/btn";
+@import "./blocks/section";
+@import "./blocks/brands";
+@import "./blocks/card";
+@import "./blocks/my-swiper";
+@import "./blocks/devices";
+@import "./blocks/prices";
+@import "./blocks/table";
+@import "./blocks/footer";
+@import "./blocks/sidebar";
+@import "./blocks/lang";
+@import "./blocks/modal";
+@import "./blocks/form";
+@import "./blocks/hidden";
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
+  box-sizing: border-box;
 }
+
+html {
+  font-family: $font-family;
+  background-color: $background-color;
+}
+
+main {
+  transition: .5s;
+  transition-delay: .5s;
+
+  @media screen and (min-width: 1440px){
+    margin-left: 320px;
+  }
+}
+

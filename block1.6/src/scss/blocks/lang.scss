@@ -1,0 +1,16 @@
+.lang-item {
+  margin: 0 3px;
+  cursor: pointer;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &_active{
+    color: #7E7E82;
+  }
+}

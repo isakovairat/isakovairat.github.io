@@ -1,0 +1,102 @@
+.btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &_additional {
+    margin-left: 48px;
+    font-family: $font_family;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      left: -26px;
+      background: url("../img/icons/i-next.svg") no-repeat center;
+    }
+
+    @media screen and (min-width: $screen-tablet) {
+      margin-left: 48px;
+      align-self: flex-start;
+    }
+  }
+
+
+  &_additional-rotate {
+    margin-left: 48px;
+    font-family: $font_family;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      left: -26px;
+      background: url("../img/icons/i-next.svg") no-repeat center;
+      transform: rotate(180deg);
+    }
+
+    @media screen and (min-width: $screen-tablet) {
+      margin-left: 48px;
+      align-self: flex-start;
+    }
+  }
+
+  &_show-all {
+    margin-top: 20px;
+    margin-bottom: 16px;
+
+    @media screen and (min-width: $screen-mobile) and (max-width: $screen-tablet - 1){
+      display: none;
+    }
+
+    @media screen and (min-width: $screen-tablet){
+      margin-bottom: 32px;
+    }
+  }
+
+  &__nav {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 16px;
+    cursor: pointer;
+
+    &:hover, &:focus{
+      border: 2px solid $btn-background-color;
+      background-color: #fff;
+    }
+
+    &:first-child {
+      align-self: center;
+      margin-left: 0;
+    }
+
+    &_hidden {
+      @media screen and (min-width: $screen-mobile) and (max-width: $screen-tablet - 1){
+        display: none;
+      }
+    }
+  }
+
+  &_get {
+    font-family: $font-family;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $text-color;
+  }
+
+}

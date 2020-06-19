@@ -1,0 +1,21 @@
+.page-header {
+  width: 100%;
+  background-color: $background-color;
+  border-bottom: 1px solid $decorative-color;
+  margin-bottom: 24px;
+  transition: .5s;
+  transition-delay: .5s;
+
+  @media screen and (min-width: $screen-mobile) {
+    background-color: #fff;
+  }
+
+  &_mobile {
+    display: flex;
+    border: none;
+  }
+
+  @media screen and (min-width: $screen-desktop) {
+    display: none;
+  }
+}

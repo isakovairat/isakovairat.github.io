@@ -1,0 +1,23 @@
+.swiper {
+
+  &-pagination {
+    margin-top: 16px;
+
+    &-bullet {
+      width: 12px;
+      height: 12px;
+
+      &-active {
+        background-color: $btn-background-color;
+      }
+    }
+
+    @media screen and (min-width: $screen-tablet){
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: $screen-tablet){
+    display: none;
+  }
+}

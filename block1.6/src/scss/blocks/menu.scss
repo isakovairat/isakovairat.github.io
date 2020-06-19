@@ -1,0 +1,92 @@
+.menu {
+  margin-left: 16px;
+  margin-bottom: 20px;
+
+  &__list {
+    width: 100%;
+    display: flex;
+    overflow: scroll;
+
+    &_mobile {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media screen and (min-width: $screen-desktop) {
+      overflow: auto;
+    }
+  }
+
+  &__item {
+    height: 40px;
+    width: auto;
+    white-space: nowrap;
+    padding: 0 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    transition: .5s;
+    color: $text-color-additional;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 6px;
+
+     &:hover, &:focus {
+      background: #FFFFFF;
+      border-radius: 6px;
+      border: 2px solid #FF3E79;
+    }
+
+    &_active {
+      background: #FFFFFF;
+      border: 2px solid $decorative-color;
+      border-radius: 6px;
+    }
+
+    &_mobile {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 32px;
+      letter-spacing: -0.2px;
+      color: #1B1C21;
+      font-weight: 500;
+      list-style: none;
+      flex-basis: 12.5%;
+      cursor: pointer;
+      transition: color .5s ease;
+
+      &_active {
+        color: #7E7E82;
+        position: relative;
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: -24px;
+          top: -5px;
+          width: 4px;
+          height: 32px;
+          background: $decorative-color;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+
+  &__link {
+    color: $text-color-additional;
+    text-decoration: none;
+  }
+
+  &_mobile {
+    margin-left: 24px;
+  }
+
+  @media screen and (min-width: $screen-tablet) {
+    margin-left: 24px;
+  }
+}

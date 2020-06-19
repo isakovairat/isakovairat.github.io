@@ -1,0 +1,111 @@
+.footer {
+  width: auto;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #D9FFF5;
+  padding: 16px 4px;
+  transition: .5s;
+  transition-delay: .5s;
+
+  &__team {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #7E7E82;
+    mix-blend-mode: normal;
+    opacity: 0.72;
+
+    @media screen and (min-width: $screen-tablet){
+      text-align: left;
+    }
+  }
+
+  &__policy {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #7E7E82;
+    mix-blend-mode: normal;
+    opacity: 0.72;
+  }
+
+  &__info {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 16px;
+    color: #7E7E82;
+    mix-blend-mode: normal;
+    opacity: 0.72;
+
+    @media screen and (min-width: $screen-tablet) {
+      text-align: right;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__email {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+    font-weight: 500;
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+
+  &__number {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #1B1C21;
+    margin-bottom: 30px;
+  }
+
+  &__languages {
+    display: flex;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+  }
+
+  &_mobile {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: 32px;
+    margin-left: 24px;
+  }
+
+  @media screen and (min-width: $screen-tablet){
+    flex-direction: row;
+    padding-top: 32px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @media screen and (min-width: 1440px){
+    margin-left: 320px;
+  }
+}

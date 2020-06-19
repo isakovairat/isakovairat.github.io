@@ -1,0 +1,25 @@
+.devices {
+  display: flex;
+
+  &__wrapper {
+    width: auto;
+    margin-bottom: 16px;
+    margin-left: 16px;
+
+    @media screen and (min-width: $screen-tablet){
+      margin-left: 24px;
+      margin-bottom: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      height: 165px;
+    }
+
+    @media screen and (min-width: 1440px){
+      margin-left: 32px;
+    }
+  }
+
+  @media screen and (min-width: $screen-mobile) and (max-width: $screen-tablet - 1) {
+    height: 208px;
+  }
+}

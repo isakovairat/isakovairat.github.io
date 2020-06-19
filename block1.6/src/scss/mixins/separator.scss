@@ -1,0 +1,7 @@
+@mixin separator{
+  content: "";
+  position: absolute;
+  height: 32px;
+  width: 2px;
+  background-color: #EAEAEA;
+}

@@ -1,0 +1,26 @@
+.logo {
+  width: 97px;
+  height: 51px;
+  margin-left: 16px;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+
+  @media screen and (min-width: $screen-mobile) and (max-width: $screen-tablet - 1px) {
+    &:after {
+      @include separator;
+      top: 10px;
+      right: -20px;
+    }
+  }
+
+  @media screen and (min-width: $screen-tablet) and (max-width: $screen-desktop - 1px){
+    margin-left: 43px;
+
+    &:after {
+      @include separator;
+      top: 10px;
+      left: -20px;
+    }
+  }
+}
