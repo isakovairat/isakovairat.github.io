@@ -150,6 +150,53 @@
 		}
 
 		window.addEventListener('resize', breakpointChecker);
+		breakpointChecker();let showAll = document.querySelector(".services__additional-btn");
+		const breakpoint = window.matchMedia('(min-width: 320px) and (max-width: 767px)');
+		let swiper;
+
+		showAll.addEventListener('click', showHidden);
+
+		function showHidden() {
+			if (this.textContent === 'Показать все') {
+				this.textContent = 'Скрыть';
+				document.querySelector('.services__brands').style.height = 'auto';
+				document.querySelector('.services__additional-img').style.transform = 'rotate(180deg)';
+
+			} else {
+				this.textContent = 'Показать все';
+				document.querySelector('.services__brands').style.height = '175px';
+				document.querySelector('.services__additional-img').style.transform = 'rotate(0deg)';
+			}
+		}
+
+		const breakpointChecker = function () {
+			if (breakpoint.matches === false) {
+				if (swiper) {
+					swiper.destroy(true, true);
+					document.querySelector('.swiper-pagination').style.display = 'none';
+				}
+				return;
+			}
+			else if (breakpoint.matches === true) {
+				return enableSwiper();
+			}
+		}
+
+		const enableSwiper = function () {
+			swiper = new Swiper('.swiper-container', {
+				slidesPerView: 'auto',
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				a11y: {
+					enabled: false,
+				},
+			});
+			document.querySelector('.swiper-pagination').style.display = 'block';
+		}
+
+		window.addEventListener('resize', breakpointChecker);
 		breakpointChecker();
 	</script>
 </body>
