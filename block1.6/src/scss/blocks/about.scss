@@ -17,7 +17,7 @@
       left: 0;
       background-color: $decorative-color;
 
-      @media screen and (min-width: 1440px){
+      @media screen and (min-width: 1440px) {
         left: 320px;
       }
     }
@@ -94,31 +94,35 @@
     margin-right: 16px;
     cursor: pointer;
 
-    &:hover, &:focus{
+    &:hover, &:focus {
       border: 2px solid $btn-background-color;
       background-color: #fff;
     }
 
   }
 
-  @media screen and (min-width: $screen-tablet) {
-    &__paragraph:not(:last-child) {
-      margin-bottom: 16px;
-    }
+  &__paragraph:not(:last-child) {
+    margin-bottom: 16px;
+  }
 
-    &__container {
+  &__container {
+    @media screen and (min-width: $screen-tablet) {
       display: flex;
       justify-content: space-between;
       margin-bottom: 16px;
     }
+  }
 
-    &__left-side {
+  &__left-side {
+    @media screen and (min-width: $screen-tablet) {
       width: 40%;
       display: flex;
       flex-direction: column;
     }
+  }
 
-    &__right-side {
+  &__right-side {
+    @media screen and (min-width: $screen-tablet) {
       width: 50%;
       margin-right: 24px;
     }

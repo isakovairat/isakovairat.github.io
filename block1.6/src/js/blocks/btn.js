@@ -2,7 +2,6 @@ const readNext = document.querySelector('#read-next');
 const showAllBrands = document.querySelector('#show-all-brands');
 const showAllDevices = document.querySelector('#show-all-devices');
 
-
 readNext.addEventListener('click', showReadNext);
 showAllBrands.addEventListener('click', showBrands);
 showAllDevices.addEventListener('click', showDevices);
@@ -15,7 +14,7 @@ function showBrands() {
     this.classList.add('btn_additional-rotate');
   } else {
   this.textContent = 'Показать все';
-    this.style.marginTop = '20px';
+  this.style.marginTop = '20px';
   document.querySelector('.brands__wrapper').style.height = '160px';
   this.classList.remove('btn_additional-rotate');
   }
@@ -43,7 +42,10 @@ function showReadNext() {
     this.classList.add('btn_additional-rotate');
   } else {
     this.textContent = 'Читать далее';
-    document.querySelector('.about__text').style.height = '160px';
+    if (window.matchMedia('screen and (min-width: 320px) and (max-width: 767px)').matches)
+      document.querySelector('.about__text').style.height = '90px';
+    else
+      document.querySelector('.about__text').style.height = '160px';
     this.classList.remove('btn_additional-rotate');
   }
 }
