@@ -27,6 +27,7 @@ function hideModalCall() {
   modalCall.style.right = '-678px';
   closeBtnModalCall.style.display = 'none';
   opacityMax();
+  sidebar.style.left = '0';
 }
 
 function hideModalFeedback() {
@@ -34,6 +35,7 @@ function hideModalFeedback() {
   modalFeedback.style.right = '-678px';
   closeBtnModalFeedback.style.display = 'none';
   opacityMax();
+  sidebar.style.left = '0';
 }
 
 
