@@ -18,12 +18,21 @@ function opacityMin() {
   sidebar.style.opacity = '0.1';
 }
 
+function opacityMax() {
+  main.style.opacity = '1';
+  footer.style.opacity = '1';
+  pageHeader.style.opacity = '1';
+}
+
 function hideModalCall() {
   const modalCall = document.querySelector('.modal_call');
   modalCall.style.right = '-768px';
   closeBtnModalCall.style.display = 'none';
   sidebar.style.opacity = '1';
   showSidebar();
+  if (matchMedia('screen and (min-width: 1440px').matches) {
+    opacityMax();
+  }
 }
 
 function hideModalFeedback() {
@@ -32,6 +41,9 @@ function hideModalFeedback() {
   closeBtnModalFeedback.style.display = 'none';
   sidebar.style.opacity = '1';
   showSidebar();
+  if (matchMedia('screen and (min-width: 1440px').matches) {
+    opacityMax();
+  }
 }
 
 
