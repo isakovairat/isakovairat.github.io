@@ -1,127 +1,124 @@
-.about {
-  &__header {
-    margin-left: 16px;
-    margin-bottom: 24px;
+.about__header {
+  margin-left: 16px;
+  margin-bottom: 24px;
 
-    &_h1 {
-      font-size: 28px;
-      line-height: 40px;
-      letter-spacing: -0.6px;
-    }
-
-    &:before {
-      content: "";
-      position: absolute;
-      width: 4px;
-      height: 40px;
-      left: 0;
-      background-color: $decorative-color;
-
-      @media screen and (min-width: 1440px) {
-        left: 320px;
-      }
-    }
-
-    @media screen and (min-width: $screen-tablet) {
-      margin-left: 24px;
-    }
-
-    @media screen and (min-width: $screen-desktop) {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    @media screen and (min-width: $screen-desktop) {
-      margin-top: 30px;
-    }
-  }
-
-  &__right {
-    display: flex;
-    align-items: center;
-    margin-right: 30px;
-
-    @media screen and (min-width: $screen-mobile) and (max-width: $screen-desktop - 1) {
-      display: none;
-    }
-  }
-
-  &__text {
-    margin: 0 16px 16px 16px;
-    height: 90px;
-    overflow: hidden;
-    font-size: 14px;
-    line-height: 18px;
-    letter-spacing: 0.2px;
-
-    @media screen and (min-width: $screen-tablet) {
-      margin-left: 24px;
-      height: 160px;
-    }
-  }
-
-  &__img {
-    margin: 20px auto;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-
-    @media screen and (min-width: $screen-tablet) {
-      margin: 0;
-    }
-  }
-
-  &__pic {
-    width: 100%;
-
-    @media screen and (min-width: $screen-tablet) {
-      border-radius: 10px;
-    }
-
-    @media screen and (min-width: $screen-desktop) {
-        width: 530px;
-    }
-  }
-
-  &__btn {
-    width: 40px;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 4px;
     height: 40px;
-    border-radius: 50%;
-    margin-left: 16px;
-    margin-right: 16px;
-    cursor: pointer;
-
-    &:hover, &:focus {
-      border: 2px solid $btn-background-color;
-      background-color: #fff;
-    }
-
+    left: 0;
+    background-color: $decorative-color;
   }
 
-  &__paragraph:not(:last-child) {
+  @media screen and (min-width: 1440px) {
+    left: 320px;
+  }
+
+  @media screen and (min-width: $screen-tablet) {
+    margin-left: 24px;
+  }
+
+  @media screen and (min-width: $screen-desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: $screen-desktop) {
+    margin-top: 30px;
+  }
+}
+
+.about__header_h1 {
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -0.6px;
+}
+
+.about__right {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+
+  @media screen and (min-width: $screen-mobile) and (max-width: $screen-desktop - 1) {
+    display: none;
+  }
+}
+
+.about__text {
+  margin: 0 16px 16px 16px;
+  height: 90px;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+
+  @media screen and (min-width: $screen-tablet) {
+    margin-left: 24px;
+    height: 160px;
+  }
+}
+
+.about__img {
+  margin: 20px auto;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  @media screen and (min-width: $screen-tablet) {
+    margin: 0;
+  }
+}
+
+.about__pic {
+  width: 100%;
+
+  @media screen and (min-width: $screen-tablet) {
+    border-radius: 10px;
+  }
+
+  @media screen and (min-width: $screen-desktop) {
+    width: 530px;
+  }
+}
+
+.about__btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 16px;
+  margin-right: 16px;
+  cursor: pointer;
+
+  &:hover, &:focus {
+    border: 2px solid $btn-background-color;
+    background-color: #fff;
+  }
+}
+
+.about__paragraph:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.about__container {
+  @media screen and (min-width: $screen-tablet) {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 16px;
   }
+}
 
-  &__container {
-    @media screen and (min-width: $screen-tablet) {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 16px;
-    }
+.about__left-side {
+  @media screen and (min-width: $screen-tablet) {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
   }
+}
 
-  &__left-side {
-    @media screen and (min-width: $screen-tablet) {
-      width: 40%;
-      display: flex;
-      flex-direction: column;
-    }
-  }
-
-  &__right-side {
-    @media screen and (min-width: $screen-tablet) {
-      width: 50%;
-      margin-right: 24px;
-    }
+.about__right-side {
+  @media screen and (min-width: $screen-tablet) {
+    width: 50%;
+    margin-right: 24px;
   }
 }

@@ -6,104 +6,104 @@
   &:focus {
     outline: none;
   }
+}
 
-  &_additional {
+.btn_additional {
+  margin-left: 48px;
+  font-family: $font_family;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: -26px;
+    background: url("../img/icons/i-next.svg") no-repeat center;
+  }
+
+  @media screen and (min-width: $screen-tablet) {
     margin-left: 48px;
-    font-family: $font_family;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    position: relative;
+    align-self: flex-start;
+  }
+}
 
-    &:before {
-      content: "";
-      position: absolute;
-      width: 24px;
-      height: 24px;
-      left: -26px;
-      background: url("../img/icons/i-next.svg") no-repeat center;
-    }
 
-    @media screen and (min-width: $screen-tablet) {
-      margin-left: 48px;
-      align-self: flex-start;
-    }
+.btn_additional-rotate {
+  margin-left: 48px;
+  font-family: $font_family;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: -26px;
+    background: url("../img/icons/i-next.svg") no-repeat center;
+    transform: rotate(180deg);
   }
 
-
-  &_additional-rotate {
+  @media screen and (min-width: $screen-tablet) {
     margin-left: 48px;
-    font-family: $font_family;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    position: relative;
+    align-self: flex-start;
+  }
+}
 
-    &:before {
-      content: "";
-      position: absolute;
-      width: 24px;
-      height: 24px;
-      left: -26px;
-      background: url("../img/icons/i-next.svg") no-repeat center;
-      transform: rotate(180deg);
-    }
+.btn_show-all {
+  margin-top: 20px;
+  margin-bottom: 16px;
 
-    @media screen and (min-width: $screen-tablet) {
-      margin-left: 48px;
-      align-self: flex-start;
-    }
+  @media screen and (min-width: $screen-mobile) and (max-width: $screen-tablet - 1){
+    display: none;
   }
 
-  &_show-all {
-    margin-top: 20px;
-    margin-bottom: 16px;
+  @media screen and (min-width: $screen-tablet){
+    margin-bottom: 32px;
+  }
+}
 
-    @media screen and (min-width: $screen-mobile) and (max-width: $screen-tablet - 1){
-      display: none;
-    }
+.btn__nav {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 16px;
+  cursor: pointer;
 
-    @media screen and (min-width: $screen-tablet){
-      margin-bottom: 32px;
-    }
+  &:hover{
+    border: 2px solid $btn-background-color;
+    background-color: #fff;
   }
 
-  &__nav {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-left: 16px;
-    cursor: pointer;
-
-    &:hover{
-      border: 2px solid $btn-background-color;
-      background-color: #fff;
-    }
-
-    &:focus{
-      background-color: #fff;
-    }
-
-    &:first-child {
-      align-self: center;
-      margin-left: 0;
-    }
-
-    &_hidden {
-      @media screen and (min-width: $screen-mobile) and (max-width: $screen-tablet - 1){
-        display: none;
-      }
-    }
+  &:focus{
+    background-color: #fff;
   }
 
-  &_get {
-    font-family: $font-family;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    color: $text-color;
+  &:first-child {
+    align-self: center;
+    margin-left: 0;
   }
+}
+
+.btn__nav_hidden {
+  @media screen and (min-width: $screen-mobile) and (max-width: $screen-tablet - 1){
+    display: none;
+  }
+}
+
+.btn_get {
+  font-family: $font-family;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: $text-color;
 }

@@ -1,16 +1,16 @@
 .lang-item {
   margin: 0 3px;
   cursor: pointer;
+}
 
-  &:first-child {
-    margin-left: 0;
-  }
+.lang-item:first-child {
+  margin-left: 0;
+}
 
-  &:last-child {
-    margin-right: 0;
-  }
+.lang-item:last-child {
+  margin-right: 0;
+}
 
-  &_active{
-    color: #7E7E82;
-  }
+.lang-item_active{
+  color: #7E7E82;
 }

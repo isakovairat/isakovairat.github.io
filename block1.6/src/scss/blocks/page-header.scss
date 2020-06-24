@@ -10,12 +10,12 @@
     background-color: #fff;
   }
 
-  &_mobile {
-    display: flex;
-    border: none;
-  }
-
   @media screen and (min-width: $screen-desktop) {
     display: none;
   }
+}
+
+.page-header_mobile {
+  display: flex;
+  border: none;
 }

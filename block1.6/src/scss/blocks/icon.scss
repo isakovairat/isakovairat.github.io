@@ -1,110 +1,110 @@
 .icon {
   width: 40px;
   height: 40px;
+}
 
-  &_i-burger {
-    background: url("../img/icons/i-burger.svg") no-repeat center;
-    background-color: $btn-background-color;
+.icon_i-burger {
+  background: url("../img/icons/i-burger.svg") no-repeat center;
+  background-color: $btn-background-color;
 
-    &:hover {
-      background: url("../img/icons/i-burger-hover.svg") no-repeat center;
-    }
+  &:hover {
+    background: url("../img/icons/i-burger-hover.svg") no-repeat center;
+  }
+}
+
+.icon_i-close {
+  background: url("../img/icons/i-close.svg") no-repeat center;
+  background-color: $btn-background-color;
+
+  &:hover {
+    background: url("../img/icons/i-close-hover.svg") no-repeat center;
+  }
+}
+
+.icon_i-message {
+  background: url("../img/icons/i-message.svg") no-repeat center;
+  background-color: $btn-background-color;
+
+  &:hover {
+    background: url("../img/icons/i-message-hover.svg") no-repeat center;
+  }
+}
+
+.icon_i-next {
+  background: url("../img/icons/i-next.svg") no-repeat center;
+  background-color: $btn-background-color;
+}
+
+.icon_i-phone {
+  background: url("../img/icons/i-phone.svg") no-repeat center;
+  background-color: $btn-background-color;
+
+  &:hover {
+    background: url("../img/icons/i-phone-hover.svg") no-repeat center;
+  }
+}
+
+.icon_i-profile {
+  background: url("../img/icons/i-profile.svg") no-repeat center;
+  background-color: $btn-background-color;
+
+  &:hover {
+    background: url("../img/icons/i-profile-hover.svg") no-repeat center;
   }
 
-  &_i-close {
-    background: url("../img/icons/i-close.svg") no-repeat center;
-    background-color: $btn-background-color;
+  @media screen and (min-width: $screen-tablet) and (max-width:  $screen-desktop - 1) {
+    margin-right: 36px;
+    position: relative;
 
-    &:hover {
-      background: url("../img/icons/i-close-hover.svg") no-repeat center;
+    &:after {
+      @include separator;
+      top: 5px;
+      right: -25px;
     }
   }
+}
 
-  &_i-message {
-    background: url("../img/icons/i-message.svg") no-repeat center;
-    background-color: $btn-background-color;
+.icon_i-search {
+  background: url("../img/icons/i-search.svg") no-repeat center;
+  background-color: $btn-background-color;
 
-    &:hover {
-      background: url("../img/icons/i-message-hover.svg") no-repeat center;
-    }
+  &:hover {
+    background: url("../img/icons/i-search-hover.svg") no-repeat center;
   }
+}
 
-  &_i-next {
-    background: url("../img/icons/i-next.svg") no-repeat center;
-    background-color: $btn-background-color;
+.icon_i-search-mobile {
+  background: url("../img/icons/i-search-mobile.svg") no-repeat center;
+  background-color: $btn-background-color;
+
+  &:hover {
+    background: url("../img/icons/i-search-mobile-hover.svg") no-repeat center;
   }
+}
 
-  &_i-phone {
-    background: url("../img/icons/i-phone.svg") no-repeat center;
-    background-color: $btn-background-color;
+.icon_i-service {
+  background: url("../img/icons/i-service.svg") no-repeat center;
+  background-color: $btn-background-color;
 
-    &:hover {
-      background: url("../img/icons/i-phone-hover.svg") no-repeat center;
-    }
+  &:hover {
+    background: url("../img/icons/i-service-hover.svg") no-repeat center;
   }
+}
 
-  &_i-profile {
-    background: url("../img/icons/i-profile.svg") no-repeat center;
-    background-color: $btn-background-color;
+.icon_i-loupe {
+  background: url("../img/icons/i-loupe.svg") no-repeat center;
+  background-color: $btn-background-color;
 
-    &:hover {
-      background: url("../img/icons/i-profile-hover.svg") no-repeat center;
-    }
-
-    @media screen and (min-width: $screen-tablet) and (max-width:  $screen-desktop - 1) {
-      margin-right: 36px;
-      position: relative;
-
-      &:after {
-        @include separator;
-        top: 5px;
-        right: -25px;
-      }
-    }
+  &:hover {
+    background: url("../img/icons/i-loupe-hover.svg") no-repeat center;
   }
+}
 
-  &_i-search {
-    background: url("../img/icons/i-search.svg") no-repeat center;
-    background-color: $btn-background-color;
+.icon_i-profile-sidebar {
+  background: url("../img/icons/i-profile.svg") no-repeat center;
+  background-color: $btn-background-color;
 
-    &:hover {
-      background: url("../img/icons/i-search-hover.svg") no-repeat center;
-    }
-  }
-
-  &_i-search-mobile {
-    background: url("../img/icons/i-search-mobile.svg") no-repeat center;
-    background-color: $btn-background-color;
-
-    &:hover {
-      background: url("../img/icons/i-search-mobile-hover.svg") no-repeat center;
-    }
-  }
-
-  &_i-service {
-    background: url("../img/icons/i-service.svg") no-repeat center;
-    background-color: $btn-background-color;
-
-    &:hover {
-      background: url("../img/icons/i-service-hover.svg") no-repeat center;
-    }
-  }
-
-  &_i-loupe {
-    background: url("../img/icons/i-loupe.svg") no-repeat center;
-    background-color: $btn-background-color;
-
-    &:hover {
-      background: url("../img/icons/i-loupe-hover.svg") no-repeat center;
-    }
-  }
-
-  &_i-profile-sidebar {
-    background: url("../img/icons/i-profile.svg") no-repeat center;
-    background-color: $btn-background-color;
-
-    &:hover {
-      background: url("../img/icons/i-profile-hover.svg") no-repeat center;
-    }
+  &:hover {
+    background: url("../img/icons/i-profile-hover.svg") no-repeat center;
   }
 }

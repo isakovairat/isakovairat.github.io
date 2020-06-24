@@ -1,8 +1,8 @@
 .hidden {
+}
 
-  &_desktop {
-    @media screen and (min-width: 1440px){
-      display: none;
-    }
+.hidden_desktop {
+  @media screen and (min-width: 1440px){
+    display: none;
   }
 }
