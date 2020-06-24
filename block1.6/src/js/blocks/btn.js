@@ -7,30 +7,30 @@ showAllBrands.addEventListener('click', showBrands);
 showAllDevices.addEventListener('click', showDevices);
 
 function showBrands() {
-  if (this.textContent === 'Показать все') {
-    this.textContent = 'Скрыть';
+  if (this.innerHTML !== 'Показать все') {
+    this.innerHTML = 'Показать все';
+    this.style.marginTop = '20px';
+    document.querySelector('.brands__wrapper').style.height = '160px';
+    this.classList.remove('btn_additional-rotate');
+  } else {
+    this.innerHTML = 'Скрыть';
     document.querySelector('.brands__wrapper').style.height = 'auto';
     this.style.marginTop = '10px';
     this.classList.add('btn_additional-rotate');
-  } else {
-  this.textContent = 'Показать все';
-  this.style.marginTop = '20px';
-  document.querySelector('.brands__wrapper').style.height = '160px';
-  this.classList.remove('btn_additional-rotate');
   }
 }
 
 function showDevices() {
-  if (this.textContent === 'Показать все') {
-    this.textContent = 'Скрыть';
-    document.querySelector('.devices__wrapper').style.height = 'auto';
-    this.style.marginTop = '10px';
-    this.classList.add('btn_additional-rotate');
-  } else {
-    this.textContent = 'Показать все';
+  if (this.innerHTML !== 'Показать все') {
+    this.innerHTML = 'Показать все';
     this.style.marginTop = '20px';
     document.querySelector('.devices__wrapper').style.height = '165px';
     this.classList.remove('btn_additional-rotate');
+  } else {
+    this.innerHTML = 'Скрыть';
+    document.querySelector('.devices__wrapper').style.height = 'auto';
+    this.style.marginTop = '10px';
+    this.classList.add('btn_additional-rotate');
   }
 }
 

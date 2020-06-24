@@ -5,6 +5,7 @@ const pageHeader = document.querySelector('.page-header');
 const main = document.querySelector('main')
 const footer = document.querySelector('.footer')
 const menuItems = document.querySelectorAll('.menu__item_mobile');
+const html = document.querySelector('html');
 
 menuItems.forEach(item => item.addEventListener('click', addActiveClass));
 
@@ -21,6 +22,7 @@ function closeSidebar() {
   main.style.opacity = '1';
   footer.style.opacity = '1';
   pageHeader.style.opacity = '1';
+  html.style.overflow = 'visible';
 }
 
 function showSidebar() {
@@ -28,6 +30,7 @@ function showSidebar() {
   main.style.opacity = '0.1';
   footer.style.opacity = '0.1';
   pageHeader.style.opacity = '0.1';
+  html.style.overflow = 'hidden';
 }
 
 export { closeBtn, burgerBtn, sidebar, pageHeader, main, footer, menuItems, addActiveClass, closeSidebar, showSidebar }
