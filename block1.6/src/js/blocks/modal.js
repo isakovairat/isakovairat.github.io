@@ -7,8 +7,11 @@ const main = document.querySelector('main');
 const footer = document.querySelector('.footer');
 const sidebar = document.querySelector('.sidebar');
 const html = document.querySelector('html');
+const overlayModal = document.querySelector('.overlay_modal');
 
 closeBtnModalCall.addEventListener('click', hideModalCall);
+overlayModal.addEventListener('click', hideModalCall);
+overlayModal.addEventListener('click', hideModalFeedback);
 closeBtnModalFeedback.addEventListener('click', hideModalFeedback);
 
 function opacityMin() {
@@ -33,6 +36,7 @@ function hideModalCall() {
   if (matchMedia('screen and (min-width: 1440px').matches) {
     opacityMax();
   }
+  overlayModal.style.display = 'none';
 }
 
 function hideModalFeedback() {
@@ -44,6 +48,7 @@ function hideModalFeedback() {
   if (matchMedia('screen and (min-width: 1440px').matches) {
     opacityMax();
   }
+  overlayModal.style.display = 'none';
 }
 
 
@@ -58,6 +63,7 @@ function showModalCall() {
   opacityMin();
   html.style.overflow = 'hidden';
 
+  overlayModal.style.display = 'block';
   if (window.matchMedia('screen (min-width: 320px) and (max-width: 1120px')) {
     sidebar.style.left = '-768px';
   }
@@ -74,6 +80,7 @@ function showModalFeedback() {
   opacityMin();
   html.style.overflow = 'hidden';
 
+  overlayModal.style.display = 'block';
   if (window.matchMedia('screen (min-width: 320px) and (max-width: 1120px')) {
     sidebar.style.left = '-768px';
   }

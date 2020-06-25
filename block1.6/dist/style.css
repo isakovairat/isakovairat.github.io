@@ -1117,6 +1117,42 @@
   .hidden_desktop {
     display: none; } }
 
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .overlay_sidebar {
+    display: none; } }
+
+@media screen and (min-width: 768px) {
+  .overlay_sidebar {
+    display: none;
+    position: fixed;
+    left: 320px;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    cursor: pointer; } }
+
+@media screen and (min-width: 1440px) {
+  .overlay_sidebar {
+    display: none; } }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .overlay_modal {
+    display: none; } }
+
+@media screen and (min-width: 768px) {
+  .overlay_modal {
+    display: none;
+    position: fixed;
+    right: 440px;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    cursor: pointer; } }
+
+@media screen and (min-width: 1440px) {
+  .overlay_modal {
+    display: none; } }
+
 * {
   padding: 0;
   margin: 0;
