@@ -35,7 +35,8 @@ function showSidebar() {
   footer.style.opacity = '0.1';
   pageHeader.style.opacity = '0.1';
   html.style.overflow = 'hidden';
-  overlaySidebar.style.display = 'block';
+  if (matchMedia('screen and (min-width: 768px) and (max-width: 1439px)').matches)
+    overlaySidebar.style.display = 'block';
 }
 
 export { closeBtn, burgerBtn, sidebar, pageHeader, main, footer, menuItems, addActiveClass, closeSidebar, showSidebar }
