@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <title>AutoSearch</title>
+<link href="style.css" rel="stylesheet"></head>
+<body>
+
+
+<div class="form__group">
+  <label for="repo" class="form__label">Let's search amazing repositories!</label>
+  <input type="text" class="form__input" id="repo" placeholder="Let's search amazing repositories!">
+</div>
+
+
+<script>
+  const api = 'https://api.github.com/search/repositories?q=';
+  const debounceInput = document.querySelector('.form__input');
+  let form = document.querySelector('.form__group');
+
+  const formItems = document.createElement('ul');
+  formItems.classList.add('form__items');
+  form.appendChild(formItems);
+
+  const list = document.createElement('div');
+  list.classList.add('list');
+  document.body.append(list);
+
+  list.addEventListener('click', function (e) {
+    e.stopPropagation();
+    if (e.target.nodeName !== 'BUTTON') return;
+    let target = e.target;
+    target.parentNode.parentNode.removeChild(target.parentNode);
+  })
+
+  formItems.addEventListener('click', function (e) {
+    e.stopPropagation();
+    if (e.target.nodeName !== 'LI') return;
+    const target = e.target;
+    let card = createCard(target);
+    list.appendChild(card);
+  })
+
+  function createCard(target) {
+    const card = document.createElement('div');
+    card.classList.add('card');
+    const cardBody = document.createElement('div');
+    cardBody.classList.add('card__body');
+    const cardName = document.createElement('p');
+    cardName.textContent = 'Name: ' + target.dataset.name;
+    const cardOwner = document.createElement('p');
+    cardOwner.textContent = 'Owner: ' + target.dataset.owner;
+    const cardStars = document.createElement('p');
+    cardStars.textContent = 'Stars: ' + target.dataset.stars;
+    cardBody.append(cardName, cardOwner, cardStars);
+    const cardBtn = document.createElement('button');
+    cardBtn.classList.add('card__btn');
+    card.appendChild(cardBody);
+    card.appendChild(cardBtn);
+    return card;
+  }
+
+  const debounce = (fn, delay) => {
+    let inDebounce;
+    return function () {
+      clearTimeout(inDebounce);
+      inDebounce = setTimeout(() => fn.apply(this, arguments), delay);
+    }
+  }
+
+  debounceInput.addEventListener('input', debounce(async function () {
+    closeAllLists();
+    if (this.value === '') return;
+
+    try {
+      let response = await fetch(api + this.value);
+      let blob = await response.json();
+      let items = blob.items;
+      items.forEach(item => {
+        const li = document.createElement('li');
+        li.classList.add('form__item');
+        li.textContent = item.name;
+        li.setAttribute('data-name', item.name);
+        li.setAttribute('data-owner', item.owner.login);
+        li.setAttribute('data-stars', item.stargazers_count);
+        formItems.appendChild(li);
+      });
+    } catch (e) {
+      console.log(e);
+    }
+  }, 600));
+
+  function closeAllLists() {
+    let toClose = document.querySelectorAll('.form__item');
+
+    for (let i = 0; i < toClose.length; i++) {
+      toClose[i].parentNode.removeChild(toClose[i]);
+    }
+  }
+</script>
+<script type="text/javascript" src="./js/bundle.js"></script></body>
+</html>
